@@ -23,6 +23,11 @@ interface Analysis {
     description: string;
     thumbnailUrl: string;
   };
+  quizQuestions?: {
+    question: string;
+    options: string[];
+    correctAnswer: number;
+  }[];
 }
 
 export default function Home() {
