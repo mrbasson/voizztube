@@ -1,4 +1,4 @@
-import { getVideoInfo, type VideoInfo } from './youtube';
+import { getVideoInfo } from './youtube';
 
 export async function analyzeVideo(apiKey: string, videoUrl: string) {
   try {
@@ -144,10 +144,10 @@ For the quiz questions:
     
     // Parse the response and ensure it matches our expected format
     try {
-      let analysisContent = data.choices[0].message.content;
+      const analysisContent = data.choices[0].message.content;
       
       // If the content is already a JSON object, use it directly
-      let analysis = typeof analysisContent === 'object' 
+      const analysis = typeof analysisContent === 'object' 
         ? analysisContent 
         : JSON.parse(analysisContent);
 
