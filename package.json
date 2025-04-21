@@ -11,6 +11,7 @@
   "dependencies": {
     "googleapi": "^1.0.2",
     "jspdf": "^3.0.0",
+    "lucide-react": "^0.503.0",
     "next": "15.1.7",
     "openai": "^4.85.1",
     "react": "^19.0.0",
