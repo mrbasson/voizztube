@@ -4,6 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import AnalysisResults from "./components/AnalysisResults";
 
+import type { VideoInfo } from "./utils/youtube";
+
 interface Analysis {
   summary: string;
   keyTakeaways: string[];
@@ -18,11 +20,7 @@ interface Analysis {
       keyPoints: string[];
     }[];
   };
-  videoInfo: {
-    title: string;
-    description: string;
-    thumbnailUrl: string;
-  };
+  videoInfo: VideoInfo;
   quizQuestions?: {
     question: string;
     options: string[];
