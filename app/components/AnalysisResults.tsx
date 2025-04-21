@@ -3,29 +3,10 @@ import CourseOutline from './CourseOutline';
 import Quiz from './Quiz';
 import type { VideoInfo } from '../utils/youtube';
 
+import type { Analysis } from '../types/Analysis';
+
 interface AnalysisResultsProps {
-  analysis: {
-    summary: string;
-    keyTakeaways: string[];
-    educationalContent: string;
-    criticalAnalysis: string;
-    courseOutline: {
-      title: string;
-      lessons: {
-        title: string;
-        description: string;
-        duration: string;
-        keyPoints: string[];
-      }[];
-    };
-    videoInfo: VideoInfo;
-    quizQuestions?: {
-      question: string;
-      options: string[];
-      correctAnswer: number;
-    }[];
-    // quizQuestions is optional, always pass an array to Quiz
-  };
+  analysis: Analysis;
 }
 
 export default function AnalysisResults({ analysis }: AnalysisResultsProps) {
