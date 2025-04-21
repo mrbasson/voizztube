@@ -19,7 +19,7 @@ interface AnalysisResultsProps {
       }[];
     };
     videoInfo: VideoInfo;
-    quizQuestions: {
+    quizQuestions?: {
       question: string;
       options: string[];
       correctAnswer: number;
@@ -59,7 +59,7 @@ export default function AnalysisResults({ analysis }: AnalysisResultsProps) {
 
         <section>
           <h2 className="text-xl font-semibold mb-3">Knowledge Check Quiz</h2>
-          <Quiz questions={analysis.quizQuestions} />
+          <Quiz questions={analysis.quizQuestions ?? []} />
         </section>
 
         <CourseOutline courseOutline={analysis.courseOutline} />
