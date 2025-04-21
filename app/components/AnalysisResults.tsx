@@ -1,7 +1,6 @@
 import VideoPlayer from './VideoPlayer';
 import CourseOutline from './CourseOutline';
 import Quiz from './Quiz';
-import type { VideoInfo } from '../utils/youtube';
 
 import type { Analysis } from '../types/Analysis';
 
