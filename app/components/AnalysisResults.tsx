@@ -24,6 +24,7 @@ interface AnalysisResultsProps {
       options: string[];
       correctAnswer: number;
     }[];
+    // quizQuestions is optional, always pass an array to Quiz
   };
 }
 
