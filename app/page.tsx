@@ -59,7 +59,10 @@ export default function Home() {
         throw new Error(data.error || 'Analysis failed');
       }
 
-      setAnalysis(data.data);
+      setAnalysis({
+      ...data.data,
+      quizQuestions: data.data.quizQuestions ?? []
+    });
     } catch (err) {
       console.error('Error in submission:', err);
       setError(err instanceof Error ? err.message : 'An error occurred');
